@@ -17,7 +17,7 @@ func TestGetFile(t *testing.T) {
 }
 
 func TestGetToken(t *testing.T) {
-
+	addTokenDirFile()
 	file, err := clientSecretFile()
 	token, err := tokenFromFile(file)
 	if err != nil {
@@ -29,7 +29,7 @@ func TestGetToken(t *testing.T) {
 }
 
 func TestGetMembers(t *testing.T) {
-
+	addTokenDirFile()
 	file, _ := clientSecretFile()
 	token, _ := tokenFromFile(file)
 
