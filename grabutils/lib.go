@@ -18,7 +18,7 @@ func clientSecretFile() (string, error) {
 	if err != nil {
 		return "", err
 	}
-	tokenCacheDir := filepath.Join(usr.HomeDir, ".facebook")
+	tokenCacheDir := filepath.Join(usr.HomeDir, ".fgrab")
 	os.MkdirAll(tokenCacheDir, 0700)
 	return filepath.Join(tokenCacheDir,
 		url.QueryEscape("token.json")), err
@@ -63,7 +63,7 @@ func addTokenDirFile() {
 	if err != nil {
 		return
 	}
-	tokenCacheDir := filepath.Join(usr.HomeDir, ".facebook")
+	tokenCacheDir := filepath.Join(usr.HomeDir, ".fgrab")
 	os.MkdirAll(tokenCacheDir, 0700)
 
 	f, err := os.Create(tokenCacheDir + "/token.json")
