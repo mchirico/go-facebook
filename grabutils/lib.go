@@ -18,13 +18,18 @@ func clientSecretFile() (string, error) {
 	if err != nil {
 		return "", err
 	}
-	tokenCacheDir := filepath.Join(usr.HomeDir, ".fgrab")
+	tokenCacheDir := filepath.Join(usr.HomeDir, ".facebook")
 	os.MkdirAll(tokenCacheDir, 0700)
 	return filepath.Join(tokenCacheDir,
 		url.QueryEscape("token.json")), err
 }
 
 func tokenFromFile(file string) (Token, error) {
+
+	if _, err := os.Stat(file); os.IsNotExist(err) {
+		addTokenDirFile()
+	}
+
 	f, err := os.Open(file)
 	if err != nil {
 		return Token{}, err
@@ -63,7 +68,7 @@ func addTokenDirFile() {
 	if err != nil {
 		return
 	}
-	tokenCacheDir := filepath.Join(usr.HomeDir, ".fgrab")
+	tokenCacheDir := filepath.Join(usr.HomeDir, ".facebook")
 	os.MkdirAll(tokenCacheDir, 0700)
 
 	f, err := os.Create(tokenCacheDir + "/token.json")
@@ -93,6 +98,7 @@ func GetMembers() string {
 	err := json.NewDecoder(strings.NewReader(data)).Decode(fb)
 	if err != nil {
 		log.Fatal("Token not set up")
+
 	}
 
 	fmt.Println(fb.Page.Next)

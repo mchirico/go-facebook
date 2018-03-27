@@ -1,6 +1,6 @@
 package grabutils
 
-
+// Token - works, but not sure how long
 var SampleToken = `
 {"access_token": "1732638360344261|1sDfyp0c-FjRqTs0JezG8XV-3D4",
  "groups":[{"group_id":"335787510131917","group_name":"Cheltenham Township Residents"}]}

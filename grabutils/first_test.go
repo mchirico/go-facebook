@@ -9,27 +9,21 @@ import (
 	"testing"
 )
 
-func TestGetFile(t *testing.T) {
-	addTokenDirFile()
-	file, _ := clientSecretFile()
-	assert.FileExists(t, file)
-
-}
 
 func TestGetToken(t *testing.T) {
-	addTokenDirFile()
+
 	file, err := clientSecretFile()
 	token, err := tokenFromFile(file)
 	if err != nil {
 		assert.Fail(t, "No token")
 	}
-
+	assert.FileExists(t, file)
 	fmt.Println(token.AccessToken)
 
 }
 
 func TestGetMembers(t *testing.T) {
-	addTokenDirFile()
+
 	file, _ := clientSecretFile()
 	token, _ := tokenFromFile(file)
 

@@ -4,7 +4,11 @@ project is in early alpha... first started to test travis.
 
 # Install
 ```bash
-go get -u github.com/mchirico/go-facebook
+
+
+go get -u github.com/mchirico/go-facebook/...
+
+
 ```
 
 ## Build
