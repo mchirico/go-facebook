@@ -10,7 +10,7 @@ import (
 )
 
 func TestGetFile(t *testing.T) {
-
+	addTokenDirFile()
 	file, _ := clientSecretFile()
 	assert.FileExists(t, file)
 
