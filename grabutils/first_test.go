@@ -45,6 +45,7 @@ func TestGetMembers(t *testing.T) {
 	data = string(getData(url, bearer))
 
 	fmt.Println(data)
+	assert.Contains(t, data, "data")
 
 }
 

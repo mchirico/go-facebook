@@ -8,6 +8,11 @@ project is in early alpha... first started to test travis.
 
 go get -u github.com/mchirico/go-facebook/...
 
+# To run it. This will create a token, if you don't have one.
+
+fgrab
+
+# Above you'll get a few members listed
 
 ```
 

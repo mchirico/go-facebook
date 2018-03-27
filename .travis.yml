@@ -2,7 +2,7 @@ language: go
 sudo: required
 dist: trusty
 go:
-  - 1.9.4
+  - "1.9.4"
   - "1.10"
 
 os:
@@ -14,4 +14,5 @@ install:
 
 script:
   - go test github.com/mchirico/go-facebook/grabutils
+
 
