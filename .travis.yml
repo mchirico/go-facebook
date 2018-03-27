@@ -1,7 +1,17 @@
 language: go
-
+sudo: required
+dist: trusty
 go:
-  - "1.10.x"
-  - master
+  - 1.9.4
+  - "1.10"
+  - tip
+os:
+  - linux
+  - osx
 
-go_import_path: github.com/stretchr/testify/assert
+install:
+  - go get github.com/stretchr/testify/assert
+
+script:
+  - go test github.com/mchirico/go-facebook/grabutils
+
