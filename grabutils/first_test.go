@@ -9,7 +9,6 @@ import (
 	"testing"
 )
 
-
 func TestGetToken(t *testing.T) {
 
 	file, err := clientSecretFile()

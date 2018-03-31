@@ -7,7 +7,6 @@ var SampleToken = `
 
 `
 
-
 type Group struct {
 	GroupId   string `json:"group_id"`
 	GroupName string `json:"group_name"`
