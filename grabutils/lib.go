@@ -2,6 +2,7 @@ package grabutils
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -9,7 +10,6 @@ import (
 	"os"
 	"os/user"
 	"path/filepath"
-	"fmt"
 	"strings"
 )
 
