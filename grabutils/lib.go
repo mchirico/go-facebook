@@ -78,10 +78,15 @@ func addTokenDirFile() {
 	defer f.Close()
 
 	_, err = f.WriteString(SampleToken)
+	if err != nil {
+		log.Fatalf("Can not create sample token.")
+	}
+
 	f.Sync()
 
 }
 
+// GetMembers -- need to add comment
 func GetMembers() string {
 	file, _ := clientSecretFile()
 	token, _ := tokenFromFile(file)
