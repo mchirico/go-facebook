@@ -7,11 +7,13 @@ var SampleToken = `
 
 `
 
+// Group -- need to add comment
 type Group struct {
 	GroupId   string `json:"group_id"`
 	GroupName string `json:"group_name"`
 }
 
+// Token -- need to add comment
 type Token struct {
 	AccessToken   string  `json:"access_token"`
 	FacebookGroup []Group `json:"groups"`
