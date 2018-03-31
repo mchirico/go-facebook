@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/mchirico/go-facebook.svg?branch=develop)](https://travis-ci.org/mchirico/go-facebook)
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/5b4953a80ca9061a9007/maintainability)](https://codeclimate.com/github/mchirico/go-facebook/maintainability)
 # go-facebook
 Collect pubic Facebook group information using Golang. This
 project is in early alpha... first started to test travis.
