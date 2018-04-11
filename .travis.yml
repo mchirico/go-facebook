@@ -13,6 +13,11 @@ install:
   - go get github.com/stretchr/testify/assert
 
 script:
-  - go test github.com/mchirico/go-facebook/grabutils
+  - go test -coverprofile=c0.out github.com/mchirico/go-facebook/grabutils
 
 
+after_success:
+- cat c0.out > c.out
+- cp c.out coverage.txt
+- bash <(curl -s https://codecov.io/bash)
+- ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
